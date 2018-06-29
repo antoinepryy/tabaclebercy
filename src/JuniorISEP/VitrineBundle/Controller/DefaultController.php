@@ -2158,7 +2158,7 @@ class DefaultController extends Controller{
           $foundUser->setPassword($password);
           $entityManager->persist($foundUser);
           $entityManager->flush();
-          $message = (new \Swift_Message('Hello Email'))
+          $message = (new \Swift_Message('[Tabac Le Bercy] Changement de mot de passe'))
            ->setFrom('antoine.ap.57@gmail.com')
            ->setTo($foundUser->getEmail())
            ->setBody('Bonjour, votre nouveau mot de passe a été réinitialisé : '.$passwordToSend)
