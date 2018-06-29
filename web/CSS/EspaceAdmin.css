@@ -1,0 +1,64 @@
+
+.forgot, .passchange{
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+
+.infos{
+  margin : auto;
+  border: 1px solid black;
+  width: 60%;
+  padding-bottom: 15px;
+  margin-bottom: 5vw;
+  padding-top: 10px;
+  background-color: white;
+}
+
+section{
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-align: center;
+  background-color: #fbf3d4;
+}
+
+img{
+  width: 120px;
+
+}
+
+.forgot{
+  font-size: 12px;
+}
+
+h4{
+  border: 0.5px solid black;
+  border-radius: 3px;
+  background-color: #bdbdbd;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+a{
+  text-decoration: none;
+}
+
+.submit{
+  margin-top: 10px;
+}
+
+button{
+  margin-top: 20px;
+}
+
+@media (max-width: 640px) {
+  section{
+    padding-top:20px;
+    padding-bottom;
+  }
+  .infos{
+    width: 80%;
+  }
+
+}

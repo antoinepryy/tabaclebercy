@@ -1,0 +1,39 @@
+{%extends "layout5.html.twig" %}
+
+{% block style %}
+<link rel="stylesheet" href="{{ asset('CSS/UserList.css') }}" />
+{% endblock %}
+
+{% block body %}
+
+<section>
+
+
+
+<br>
+  <table>
+    <tr>
+       <th>Nom</th>
+       <th>Prénom</th>
+       <th>Date de naissance</th>
+       <th>Mail</th>
+       <th>Action</th>
+   </tr>
+
+  {% for user in listUsers %}
+  {% if user.email != "tabacbercy@gmail.com" %}
+  <tr>
+      <td>{{ user.lastname }}</td>
+      <td>{{ user.firstname }}</td>
+      <td>{{ user.birthdate|date('Y-m-d') }}</td>
+      <td>{{ user.email }}</td>
+      <td><a href=" {{ path('junior_isep_vitrine_admin_deleteuser', { 'id': user.id, 'nextpath': 'list' } ) }} ">Supprimer</a></td>
+  </tr>
+  {% endif %}
+
+  {% endfor %}
+
+   </table>
+</section>
+
+{% endblock %}

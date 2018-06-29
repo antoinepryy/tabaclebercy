@@ -1,0 +1,35 @@
+{%extends "layout2.html.twig" %}
+{% block style %}
+<link rel="stylesheet" href="{{ asset('CSS/Registration.css') }}" />
+{% endblock %}
+{% block body %}
+
+<section>
+
+{{ form_start(form) }}
+    <div class="form">{{ form_row(form.firstname) }}</div>
+    <div class="form">{{ form_row(form.lastname) }}</div>
+    <div class="form">{{ form_row(form.birthdate) }}</div>
+    <div class="form">{{ form_row(form.email) }}</div>
+    <div class="form">{{ form_row(form.plainPassword.first) }}</div>
+    <div class="form">{{ form_row(form.plainPassword.second) }}</div>
+
+    </br>
+    <div class="googl">
+
+    <div class="g-recaptcha" data-sitekey="6LdgoEUUAAAAALPfepB70hctRFD_2OmhHDnk--a3"></div>
+
+
+
+    </div>
+
+    {{form_widget(form)}}
+
+    </br>
+
+    <button type="submit">S'inscrire</button>
+{{ form_end(form) }}
+
+</section>
+
+{% endblock %}

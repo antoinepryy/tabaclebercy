@@ -1,0 +1,17 @@
+{%extends "layout6.html.twig" %}
+{% block style %}
+<link rel="stylesheet" href="{{ asset('CSS/ModifySentence.css') }}" />
+{% endblock %}
+{% block body %}
+<section>
+  <div class="modifycontactform">
+    {{ form_start(form1) }}
+    {{ form_widget(form1) }}
+    {{ form_end(form1) }}
+
+  </div>
+</section>
+
+
+
+{% endblock %}

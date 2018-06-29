@@ -1,0 +1,31 @@
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+table
+{
+
+    border-collapse: collapse;
+
+}
+td, th /* Mettre une bordure sur les td ET les th */
+{
+    border: 1px solid black;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+table, body{
+margin: auto;
+  margin-bottom: 10px;
+}
+
+td a{
+text-decoration: none;
+}
+
+table{
+  background-color: white;
+}

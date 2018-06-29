@@ -1,0 +1,58 @@
+{%extends "layout5.html.twig" %}
+{% block style %}
+<link rel="stylesheet" href="{{ asset('CSS/EspaceAdmin.css') }}" />
+{% endblock %}
+{% block body %}
+
+<section>
+    <div class="infos">
+      <div class="activ-sections">
+
+          <div class="activated">
+            <h4>Sections actives</h2>
+          </div>
+
+
+          {{ form_start(form) }}
+          {{ form_widget(form) }}
+          {{ form_end(form) }} <br />
+
+      </div>
+
+      <div class="access-queries"><h4>Gestion des marques</h4>
+        <a href="{{ path('junior_isep_vitrine_admin_addbrand') }}"> Ajouter marque</a><br />
+        <a href="{{ path('junior_isep_vitrine_admin_listbrand') }}"> Voir la liste</a>
+      </div><br />
+
+      <div class="access-queries"><h4>Demandes d'accès</h4>
+        <a href="{{ path('junior_isep_vitrine_admin_acceslist') }}"> Voir la liste</a>
+      </div><br />
+
+      <div class="access-queries"><h4>Comptes validés</h4>
+        <a href="{{ path('junior_isep_vitrine_admin_userlist') }}"> Voir la liste</a>
+      </div><br />
+
+      <div class="access-queries"><h4>Sécurité</h4>
+        <a href="{{ path('junior_isep_vitrine_admin_logs') }}"> Logs Admin</a><br />
+        <a href="{{ path('junior_isep_vitrine_changepassword') }}">Changer mot de passe</a>
+      </div><br />
+
+
+      <div class="access-queries"><h4>Contact</h4>
+        <a href="{{ path('junior_isep_vitrine_admin_modifycontact') }}"> Modifier les informations</a>
+      </div><br />
+
+      <div class="access-queries"><h4>Réglementation</h4>
+        <a href="{{ path('junior_isep_vitrine_admin_modifysentence') }}"> Modifier le message en pied de page</a>
+      </div><br />
+
+
+
+
+    </div>
+
+
+
+  </section>
+
+{% endblock %}

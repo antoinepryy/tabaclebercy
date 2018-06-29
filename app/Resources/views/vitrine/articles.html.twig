@@ -1,0 +1,311 @@
+{%extends "layout1.html.twig" %}
+{% block style %}
+<link rel="stylesheet" href="{{ asset('CSS/Articles.css') }}" />
+{% endblock %}
+{% block body %}
+
+
+<section>
+  {% if state or app.user.getemail == 'tabacbercy@gmail.com' %}
+
+    {% if section == 1 %}
+    {% if app.user.getemail == 'tabacbercy@gmail.com' %}
+    <div class="addarticlecontainer">
+       <a href="{{ path('junior_isep_vitrine_admin_addtabac') }}" class="addarticle">Ajouter un article</a>
+    </div>
+
+    {% endif %}
+      <p class="list">
+        Liste des produits disponibles en boutique :
+      </p>
+
+      <div class="cat">
+        <a href="{{ path('junior_isep_vitrine_cigarettes', { 'page': 1, 'order': 'default', 'form': 'none'})}}">Cigarettes</a>
+        <a href="{{ path('junior_isep_vitrine_cigares', { 'page': 1, 'order': 'default', 'form': 'none'})}}">Cigares</a>
+        <a href="{{ path('junior_isep_vitrine_tabacapipe', { 'page': 1, 'order': 'default', 'form': 'none'})}}">Tabac à pipe</a>
+
+      </div>
+      <br /><br />
+    {% elseif section == 2 %}
+    {% if app.user.getemail == 'tabacbercy@gmail.com' %}
+    <div class="addarticlecontainer">
+       <a href="{{ path('junior_isep_vitrine_admin_addcigaretteelec') }}" class="addarticle">Ajouter un article</a>
+    </div>
+    {% endif %}
+      <p class="list">
+        Liste des produits disponibles en boutique :
+      </p>
+
+      <div class="cat">
+        <a href="{{ path('junior_isep_vitrine_materiel', { 'page': 1, 'order': 'default', 'form': 'none'})}}">Matériel</a>
+        <a href="{{ path('junior_isep_vitrine_cigaretteelectroniquejunior', { 'page': 1, 'order': 'default', 'form': 'none'})}}">Junior</a>
+        <a href="{{ path('junior_isep_vitrine_cigaretteelectroniquesenior', { 'page': 1, 'order': 'default', 'form': 'none'})}}">Senior</a>
+        <a href="{{ path('junior_isep_vitrine_liquides', { 'page': 1, 'order': 'default', 'form': 'none'})}}">Liquides</a>
+
+      </div>
+      <br /><br />
+    {% elseif section == 3 %}
+    {% if app.user.getemail == 'tabacbercy@gmail.com' %}
+    <div class="addarticlecontainer">
+      <a href="{{ path('junior_isep_vitrine_admin_addaccessoire') }}" class="addarticle">Ajouter un article</a>
+    </div>
+    {% endif %}
+      <p class="list">
+        Liste des produits disponibles en boutique :
+      </p>
+
+      <div class="cat">
+        <a href="{{ path('junior_isep_vitrine_briquets', { 'page': 1, 'order': 'default', 'form': 'none'})}}">Briquets</a>
+        <a href="{{ path('junior_isep_vitrine_accessoirescigares', { 'page': 1, 'order': 'default', 'form': 'none'})}}">Accessoires cigares</a>
+        <a href="{{ path('junior_isep_vitrine_pipes', { 'page': 1, 'order': 'default', 'form': 'none'})}}">Pipes</a>
+        <a href="{{ path('junior_isep_vitrine_autres', { 'page': 1, 'order': 'default', 'form': 'none'})}}">Autres</a>
+      </div>
+      <br /><br />
+    {% elseif section == 4 %}
+    {% if app.user.getemail == 'tabacbercy@gmail.com' %}
+    <div class="addarticlecontainer">
+      <a href="{{ path('junior_isep_vitrine_admin_addalcools') }}" class="addarticle">Ajouter un article</a>
+    </div>
+    {% endif %}
+      <p class="list">
+        Liste des produits disponibles en boutique :
+      </p>
+
+      <div class="cat">
+        <a href="{{ path('junior_isep_vitrine_champagnes', { 'page': 1, 'order': 'default', 'form': 'none'})}}">Champagnes</a>
+        <a href="{{ path('junior_isep_vitrine_vinsrouges', { 'page': 1, 'order': 'default', 'form': 'none'})}}">Vins rouges</a>
+        <a href="{{ path('junior_isep_vitrine_vinsblancs', { 'page': 1, 'order': 'default', 'form': 'none'})}}">Vins blancs</a>
+        <a href="{{ path('junior_isep_vitrine_curiosites', { 'page': 1, 'order': 'default', 'form': 'none'})}}">Curiosités</a>
+        <a href="{{ path('junior_isep_vitrine_spiritueux', { 'page': 1, 'order': 'default', 'form': 'none'})}}">Spiritueux et Liqueurs</a>
+      </div>
+      <br /><br />
+    {% endif %}
+
+
+
+
+    {% if (page != 1) or (listArticles|length != 0) %}
+    <div>
+       <p class="filter-text">
+         Chercher par marque :
+       </p>
+    </div>
+    <div class="alphabet">
+      <a href="{{ path(app.request.attributes.get('_route'), { 'page': 1, 'order': 'a', 'form': 'none'}) }}">A</a>
+      <a href="{{ path(app.request.attributes.get('_route'), { 'page': 1, 'order': 'b', 'form': 'none'}) }}">B</a>
+      <a href="{{ path(app.request.attributes.get('_route'), { 'page': 1, 'order': 'c', 'form': 'none'}) }}">C</a>
+      <a href="{{ path(app.request.attributes.get('_route'), { 'page': 1, 'order': 'd', 'form': 'none'}) }}">D</a>
+      <a href="{{ path(app.request.attributes.get('_route'), { 'page': 1, 'order': 'e', 'form': 'none'}) }}">E</a>
+      <a href="{{ path(app.request.attributes.get('_route'), { 'page': 1, 'order': 'f', 'form': 'none'}) }}">F</a>
+      <a href="{{ path(app.request.attributes.get('_route'), { 'page': 1, 'order': 'g', 'form': 'none'}) }}">G</a>
+      <a href="{{ path(app.request.attributes.get('_route'), { 'page': 1, 'order': 'h', 'form': 'none'}) }}">H</a>
+      <a href="{{ path(app.request.attributes.get('_route'), { 'page': 1, 'order': 'i', 'form': 'none'}) }}">I</a>
+      <a href="{{ path(app.request.attributes.get('_route'), { 'page': 1, 'order': 'j', 'form': 'none'}) }}">J</a>
+      <a href="{{ path(app.request.attributes.get('_route'), { 'page': 1, 'order': 'k', 'form': 'none'}) }}">K</a>
+      <a href="{{ path(app.request.attributes.get('_route'), { 'page': 1, 'order': 'l', 'form': 'none'}) }}">L</a>
+      <a href="{{ path(app.request.attributes.get('_route'), { 'page': 1, 'order': 'm', 'form': 'none'}) }}">M</a>
+      <a href="{{ path(app.request.attributes.get('_route'), { 'page': 1, 'order': 'n', 'form': 'none'}) }}">N</a>
+      <a href="{{ path(app.request.attributes.get('_route'), { 'page': 1, 'order': 'o', 'form': 'none'}) }}">O</a>
+      <a href="{{ path(app.request.attributes.get('_route'), { 'page': 1, 'order': 'p', 'form': 'none'}) }}">P</a>
+      <a href="{{ path(app.request.attributes.get('_route'), { 'page': 1, 'order': 'q', 'form': 'none'}) }}">Q</a>
+      <a href="{{ path(app.request.attributes.get('_route'), { 'page': 1, 'order': 'r', 'form': 'none'}) }}">R</a>
+      <a href="{{ path(app.request.attributes.get('_route'), { 'page': 1, 'order': 's', 'form': 'none'}) }}">S</a>
+      <a href="{{ path(app.request.attributes.get('_route'), { 'page': 1, 'order': 't', 'form': 'none'}) }}">T</a>
+      <a href="{{ path(app.request.attributes.get('_route'), { 'page': 1, 'order': 'u', 'form': 'none'}) }}">U</a>
+      <a href="{{ path(app.request.attributes.get('_route'), { 'page': 1, 'order': 'v', 'form': 'none'}) }}">V</a>
+      <a href="{{ path(app.request.attributes.get('_route'), { 'page': 1, 'order': 'w', 'form': 'none'}) }}">W</a>
+      <a href="{{ path(app.request.attributes.get('_route'), { 'page': 1, 'order': 'x', 'form': 'none'}) }}">X</a>
+      <a href="{{ path(app.request.attributes.get('_route'), { 'page': 1, 'order': 'y', 'form': 'none'}) }}">Y</a>
+      <a href="{{ path(app.request.attributes.get('_route'), { 'page': 1, 'order': 'z', 'form': 'none'}) }}">Z</a>
+
+    <br /><br />
+  </div>
+  {% endif %}
+
+  <div class="products">
+
+    {% for article in listArticles %}
+
+
+        <div class="item-container">
+          <div class="top-article">
+            <div class="left-top">
+              <div class="title">{{ article.brand.name }} {{ article.name }}</div>
+
+              <div class="price">{{ article.price }} &euro;</div>
+              <div class="description">{{ article.description }}</div>
+            </div>
+            <div class="right-top">
+              {% if article.image != ''%}
+              <img class="pict" src="{{ vich_uploader_asset(article, 'pictureFile') }}" />
+
+              {% else %}
+              <div class="pict pictcont">
+                <div>
+                   Pas d'image à afficher
+                </div>
+
+              </div>
+              {% endif %}
+            </div>
+
+          </div>
+          <div class="bottom-article">
+            <div class="bottom-left">
+              <div>
+                {% if article.available %}
+                <span class="dispoMag">Disponibilité magasin <img class="dispo" src="{{ asset( '../web/uploads/green.png' ) }}"/>  </span>
+                {% else %}
+                <span class="dispoMag">Disponibilité magasin <img class="nonDispo" src="{{ asset( '../web/uploads/red.png' ) }}"/>  </span>
+                {% endif %}
+                {% if article.onOrder %}
+                <span class="commande">Sur commande <img class="dispo" src="{{ asset( '../web/uploads/green.png' ) }}"/></span>
+                {% else %}
+                <span class="commande">Sur commande <img class="nonDispo" src="{{ asset( '../web/uploads/red.png' ) }}"/></span>
+                {% endif %}
+
+              </div>
+
+            </div>
+
+
+
+
+          {% if app.user.getemail == 'tabacbercy@gmail.com' %}
+          <div class="admin-actions">
+            <a class="admin-delete" href="{{ path('junior_isep_vitrine_admin_deletearticle', { 'id': article.id}) }}">&times;</a>
+            <a class="admin-modify" href="{{ path(app.request.attributes.get('_route'), { 'page': page, 'order': order, 'form': loop.index - 1 }) }}"> <img src="{{ asset( '../web/uploads/edit-pencil.png' ) }}" /></a>
+          </div>
+          {% endif %}
+
+          </div>
+        </div>
+
+    {% endfor %}
+  </div>
+
+  {% if form != 'none'%}
+
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span><br />
+      <p>{{ form_start(form) }}
+      {{ form_widget(form) }}
+      {{ form_end(form) }}</p>
+    </div>
+
+  </div>
+
+  {% endif %}
+
+  <br />
+  <br />
+  {% if listArticles|length == 0 %}
+  <div id="noProduct">
+    Aucun article disponible dans cette catégorie
+  </div>
+  {% endif %}
+  {% if (page != 1) or (listArticles|length != 0) %}
+  <div class="pages">
+    {% if page != 1 %}
+    <a class="linkpage" href="{{ path(app.request.attributes.get('_route'), { 'page': page-1, 'order': order, 'form': 'none'}) }}">Page précédente - </a>
+    {% endif %}
+
+    {{page}}
+    {% if listArticles|length == 8 %}
+    <a class="linkpage" href="{{ path(app.request.attributes.get('_route'), { 'page': page+1, 'order': order, 'form': 'none'}) }}"> - Page suivante</a>
+    {% endif %}
+  {% endif %}
+
+    <br /><br />
+
+
+  </div>
+
+  {% else %}
+    <div class="maintenance">
+      <p>
+        SECTION ACTUELLEMENT EN MAINTENANCE
+      </p>
+    </div>
+
+
+  {% endif %}
+
+
+    </section>
+
+    {% if section == 2 or section == 1 %}
+      {% if listArticles|length != 0 %}
+      <div class="sentence">
+         <p>
+           {{ sentence }}
+         </p>
+      </div>
+      {% else %}
+      <div class="sentence s-bottom">
+         <p>
+           {{ sentence }}
+         </p>
+      </div>
+
+      {% endif %}
+
+
+
+    {% endif %}
+
+{% endblock %}
+
+
+
+
+{% block js %}
+
+<script>
+
+var articles = document.getElementsByClassName('item-container');
+
+
+if(articles.length == 0){
+  document.getElementById("body").style.backgroundColor = "fbf3d4";
+  document.getElementsByClassName("foot-elements")[0].style.width= "100%";
+  document.getElementsByClassName("foot-elements")[0].style.position= "fixed";
+  document.getElementsByClassName("foot-elements")[0].style.bottom= "0";
+  document.getElementsByClassName("pages")[0].style.position= "fixed";
+  document.getElementsByClassName("pages")[0].style.bottom  = "50px";
+  document.getElementsByClassName("pages")[0].style.right="50%";
+}
+
+if(articles.length == 0){
+  document.getElementById("noProduct").removeAttribute("hidden");
+}
+
+
+
+var modal = document.getElementById('myModal');
+
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+
+// When the user clicks on the button, open the modal
+
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+</script>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{%extends "layout3.html.twig" %}
+{% block style %}
+<link rel="stylesheet" href="{{ asset('CSS/Accueil.css') }}" />
+{% endblock %}
+{% block body %}
+
+<section>
+
+
+  <div class="catDisp">
+
+      <a href="{{ path('junior_isep_vitrine_cigarettes', { 'page': 1, 'order': 'default', 'form' :'none'})}}" class="cat" id="tabac">Tabac</a><br />
+
+
+      <a href="{{ path('junior_isep_vitrine_cigaretteelectroniquejunior', { 'page': 1, 'order': 'default', 'form' :'none'})}}" class="cat" id="accessoires">Accessoires</a><br />
+
+
+      <a href="{{ path('junior_isep_vitrine_briquets', { 'page': 1, 'order': 'default', 'form' :'none'})}}" class="cat" id="cigaretteElec">Cigarette électronique</a><br />
+
+
+      <a href="{{ path('junior_isep_vitrine_champagnes', { 'page': 1, 'order': 'default', 'form' :'none'})}}" class="cat" id="alcools">Alcools</a><br />
+
+  </div>
+</section>
+
+
+
+{% endblock %}

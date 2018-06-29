@@ -1,0 +1,34 @@
+{%extends "layout6.html.twig" %}
+{% block style %}
+<link rel="stylesheet" href="{{ asset('CSS/Infos.css') }}" />
+{% endblock %}
+{% block body %}
+
+<section>
+    <div class="infos">
+      <div>Prénom : {{ app.user.getfirstname }}</div><br />
+      <div>Nom : {{ app.user.getlastname }}</div><br />
+
+
+
+      <div>Date de naissance : {{ app.user.getbirthdate|date('Y-m-d') }}</div><br />
+      {% if status != null %}
+      <p class="status">
+        Ajout réussi !
+      </p>
+
+      {% endif %}
+      {{ form_start(form1) }}
+      {{ form_widget(form1) }}
+      {{ form_end(form1) }}<br>
+
+
+
+      <a href="{{ path('junior_isep_vitrine_changepassword') }}" class="passchange">Changer mot de passe</a><br />
+      <a href="{{ path('junior_isep_vitrine_forgotpassword') }}" class="forgot">Mot de passe oublié</a> <br /><br />
+
+    </div>
+</section>
+
+
+{% endblock %}

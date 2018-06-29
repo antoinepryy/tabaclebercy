@@ -1,0 +1,47 @@
+{%extends "layout2.html.twig" %}
+{% block style %}
+<link rel="stylesheet" href="{{ asset('CSS/Login.css') }}" />
+{% endblock %}
+{% block body %}
+
+
+<section>
+
+  {% if app.request.query.get("state") == 'registered' %}
+  <div class="state">
+    Vous venez de créer votre compte ! Vous pourrez y accéder une fois que l'administrateur vous aura
+    accepté. Cette procédure peut prendre plusieurs jours.
+  </div><br />
+  {% endif %}
+
+<div class="form">
+
+
+
+
+  <form action="{{ path('login_check') }}" method="post">
+
+    <label for="username">Mail :</label>
+    <input type="text" id="username" name="_username" value="{{ last_username }}" />
+    <br/>
+
+    <label for="password">Mot de passe :</label>
+    <input type="password" id="password" name="_password" />
+    </br></br>
+    <label for="remember_me">Se souvenir de moi</label>
+    <input type="checkbox" id="remember_me" name="_remember_me" checked />
+    </br>
+    {% if error %}
+      <div class="alert alert-danger">{{ error.message }}</div>
+    {% endif %}
+
+
+    <br />
+    <input type="submit" value="Connexion" />
+  </form>
+  <a href="{{ path('junior_isep_vitrine_forgotpassword') }}">Mot de passe oublié</a>
+  <div/>
+
+</section>
+
+{% endblock %}

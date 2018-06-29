@@ -1,0 +1,27 @@
+{%extends "layout6.html.twig" %}
+{% block style %}
+<link rel="stylesheet" href="{{ asset('CSS/AddProduct.css') }}" />
+{% endblock %}
+{% block body %}
+
+<section>
+  <div class="formulaire">
+    <div class="form-container">
+      {% if status != null %}
+      <p class="status">
+        Ajout réussi !
+      </p>
+      {% endif %}
+      {{ form_start(form) }}
+      {{ form_widget(form) }}
+      {{ form_end(form) }}
+
+    </div>
+
+  </div>
+
+
+</section>
+
+
+{% endblock %}

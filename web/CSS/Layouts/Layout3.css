@@ -1,0 +1,159 @@
+body{
+  font-family: 'Roboto', sans-serif;
+  margin: 0px;
+  overflow-x: hidden;
+
+
+}
+
+header{
+  background-color: #ff7518;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.titre{
+
+  margin-left: 5%;
+
+}
+
+.titre a{
+  text-decoration: none;
+  color: black;
+
+}
+.user-part{
+  font-size: 1.5vw;
+  margin-right: 5%;
+}
+
+.top-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.cat-container{
+  border: solid black 1px;
+  border-radius: 2px;
+  background-color: #4f2a05;
+  display: table;
+  width: 99.9%;
+}
+
+
+
+.headCat{
+
+  border: 1px black solid;
+  font-size: 1.9vw;
+  border-color: black;
+  background-color: #4f2a05;
+  color: white;
+  display: table-cell;
+  text-align: center;
+  text-decoration: none;
+}
+
+header .client , .footerContact, .footerMention, .logout{
+  text-decoration: none;
+}
+
+
+
+.foot-elements{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff7518;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.copyright{
+  margin-right: 3%;
+}
+
+.footerContact, .footerMention{
+  margin-left:2%;
+}
+
+.foot-links{
+  width: 50%;
+}
+
+.foot-links a{
+  vertical-align: middle;
+}
+
+.footerContact, .footerMention, .copyright{
+  font-size: 1.2vw;
+}
+
+footer{
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+
+
+}
+
+
+
+form{
+  margin : auto;
+  border: 1px solid black;
+  width: 200px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  background-color: white;
+}
+
+section{
+  border-radius: 3px;
+  position: absolute;
+  top: auto;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  top: 70px;
+  margin-top: 1px;
+  z-index: 0;
+
+  padding-bottom: 60px;
+  text-align: center;
+
+}
+
+body{
+  background-color: #fbf3d4;
+}
+
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a{
+  color: #884DA7;
+}
+
+section a:visited, section a, footer a, .user-part a, .user-part a:visited{
+  color: black;
+}
+
+@media (max-width: 640px) {
+  .footerContact, .footerMention, .copyright, .client, .logout{
+    font-size: 2.5vw;
+  }
+
+  .headCat{
+    padding: 6px;
+    font-size: 2.7vw;
+  }
+}

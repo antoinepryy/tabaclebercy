@@ -1,0 +1,45 @@
+
+.modifycontactform{
+  border: 1px solid black;
+  margin: auto;
+  margin-top:30px;
+  background-color: white;
+  width: 40%;
+}
+
+#form div{
+  padding: 10 5 10 5;
+  position: relative;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+
+#form_address{
+  size: 80;
+}
+
+form div{
+  display: grid;
+  text-align: center;
+  padding: 0;
+}
+
+@media (max-width: 640px) {
+  #form{
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .modifycontactform{
+    border: 1px solid black;
+    margin: auto;
+    margin-top:30px;
+    background-color: white;
+    width: auto;
+  }
+
+}

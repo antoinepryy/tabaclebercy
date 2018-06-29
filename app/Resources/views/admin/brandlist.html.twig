@@ -1,0 +1,27 @@
+{%extends "layout5.html.twig" %}
+{% block style %}
+<link rel="stylesheet" href="{{ asset('CSS/BrandList.css') }}" />
+{% endblock %}
+{% block body %}
+
+<section>
+
+<br>
+  <table>
+    <tr>
+       <th>Nom</th>
+       <th>Action</th>
+   </tr>
+
+  {% for brand in brands %}
+  <tr>
+      <td>{{ brand.name }}</td>
+      <td><a href=" {{ path('junior_isep_vitrine_admin_modifybrand', { 'id': brand.id } ) }} ">Modifier</a> | <a href=" {{ path('junior_isep_vitrine_admin_deletebrand', { 'id': brand.id} ) }} ">Supprimer</a></td>
+  </tr>
+
+  {% endfor %}
+
+   </table>
+</section>
+
+{% endblock %}

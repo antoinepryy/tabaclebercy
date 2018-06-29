@@ -1,0 +1,6 @@
+services:
+  JuniorISEP_formgen:
+    class: JuniorISEP\VitrineBundle\FormGen\JuniorISEPFormGen
+#    junior_isep_vitrine.example:
+#        class: JuniorISEP\VitrineBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

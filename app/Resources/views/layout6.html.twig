@@ -1,0 +1,74 @@
+<head>
+  <title>Tabac Le Bercy</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
+  <link rel="stylesheet" href="{{ asset('CSS/Layouts/layout6.css') }}" />
+  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  {% block style %}
+
+  {% endblock %}
+
+
+
+</head>
+
+<body id="body">
+  <header>
+    <div class="top-container">
+      <div class="titre"><a href="{{ path('junior_isep_vitrine_accueil') }}"><h1>Tabac le Bercy</h1></a></div>
+      <div class="user-part">
+      {% if app.user.getemail == 'tabacbercy@gmail.com' %}
+        <a href="{{ path('junior_isep_vitrine_espaceadmin') }}" class="client">Espace admin </a>|
+      {% else %}
+        <a href="{{ path('junior_isep_vitrine_espaceclient') }}" class="client">Espace client </a>|
+      {% endif %}
+        <a href="{{ path('logout') }}" class="logout">Déconnexion</a>
+      </div>
+
+    </div>
+    <div class="cat-container">
+      <a href="{{ path('junior_isep_vitrine_accueil') }}" class="headCat">Accueil</a>
+      <a href="{{ path('junior_isep_vitrine_cigarettes', { 'page': 1, 'order': 'default', 'form': 'none'}) }}" class="headCat">Tabac</a>
+      <a href="{{ path('junior_isep_vitrine_cigaretteelectroniquejunior', { 'page': 1, 'order': 'default', 'form': 'none'}) }}" class="headCat" >Cigarette électronique</a>
+      <a href="{{ path('junior_isep_vitrine_briquets', { 'page': 1, 'order': 'default', 'form': 'none'}) }}" class="headCat">Accessoires</a>
+      <a href="{{ path('junior_isep_vitrine_vinsrouges', { 'page': 1, 'order': 'default', 'form': 'none'}) }}" class="headCat">Alcools et curiosités</a>
+    </div>
+  </header>
+
+  {% block body %}
+
+  {% endblock %}
+
+  <footer id="footer">
+    <div class="foot-elements">
+      <div class="foot-links">
+        <a href="{{ path('junior_isep_vitrine_infoscontact') }}" class="footerContact">Nous contacter</a>
+        <a href="{{ path('junior_isep_vitrine_mentionslegales') }}" class="footerMention">Mentions légales</a>
+      </div>
+      <div class="copyright">
+        <h3>Tabac le Bercy &#9400; </h3>
+      </div>
+
+
+    </div>
+
+  </footer>
+</body>
+
+
+
+<style>
+
+
+
+
+
+
+
+</style>
+
+{% block js %}
+
+{% endblock %}

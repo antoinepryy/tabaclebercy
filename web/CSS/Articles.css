@@ -1,0 +1,438 @@
+.maintenance{
+  margin-top: 8%;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+
+}
+
+.maintenance p{
+  text-align: center;
+  color: red;
+}
+
+
+section{
+  padding-top: 10px;
+}
+
+.pages{
+  text-align: center;
+  font-size: 1em;
+}
+
+.list{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 0px;
+}
+
+
+section{
+  border-radius:3px;
+  background-color: #fbf3d4;
+}
+
+.column{
+  display: flex;
+}
+
+article{
+  display: flex;
+}
+
+
+
+.list, .cat{
+  text-align: center;
+}
+
+.cat a, .addarticle{
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border : 1px solid black;
+  border-radius: 2px;
+  background-color: white;
+  color: black;
+}
+
+.alphabet{
+  text-align: center;
+  border-bottom: 1px solid grey;
+  width: 85%;
+  margin: auto;
+
+}
+
+
+
+
+.item-container{
+  margin-top:10px;
+  margin-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid grey;
+  width: 85%;
+  margin: auto;
+
+}
+
+.title{
+  color: blue;
+}
+
+
+
+.dispoMag, .commande{
+  display: flex;
+}
+
+
+.admin-modify img{
+  width: 25%;
+}
+
+.filter-text{
+  text-align:center;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+.nonDispo{
+  width: 0.7em;
+	height: 0.7em;
+  padding-top:6px;
+  padding-left: 10px;
+
+}
+
+.dispo{
+
+  width: 0.7em;
+	height: 0.7em;
+  padding-top:6px;
+  padding-left: 10px;
+}
+
+.cat a, .alphabet a, .addarticle, .linkpage{
+  text-decoration: none;
+}
+
+.admin-delete{
+  color: black;
+}
+
+
+
+.products{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-gap: 15px;
+}
+
+@media (max-width: 640px) {
+  .products {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    grid-gap: 5px;
+  }
+}
+
+.item-container{
+  width: 85%;
+  height: 80%;
+  background-color: #FF8C35;
+  border: 1px solid grey;
+  padding: 10px;
+}
+
+.top-article{
+  display: flex;
+  justify-content: space-between;
+}
+
+.pages{
+  text-align: center;
+  font-size: 1em;
+}
+
+.pict{
+  border: 1px solid black;
+  height: 9vw;
+  width: 17vw;
+  text-align: center;
+  margin-right: 5px;
+  margin-left: auto;
+}
+
+
+.commande{
+  justify-content:space-between;
+}
+
+.admin-actions{
+  vertical-align: center;
+  padding-top: 10px;
+  justify-content: space-between;
+}
+
+.admin-delete{
+  padding-right: 10px;
+}
+
+
+
+.item-container{
+  height: 160px;
+  border-radius: 3px;
+}
+
+.right-top{
+  height: 90px;
+}
+
+.bottom-article{
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.left-top{
+}
+
+.bottom-article{
+  display: flex;
+}
+
+
+.content{
+  display: flex;
+
+}
+
+.description{
+  height:50px;
+  overflow:auto;
+}
+
+.title, .price, .description{
+  font-size: 1.1em;
+}
+
+.dispoMag, .commande{
+  font-size: 0.9em;
+}
+
+.bottom-article{
+  height: 55px;
+  width: auto;
+}
+.bottom-left{
+  position: relative;
+  width: 200px;
+  height: auto;
+}
+
+.bottom-left div{
+  position: absolute;
+  bottom: 0;
+}
+
+
+
+.admin-actions img, .admin-actions a{
+  margin-top:50%;
+}
+
+.dispoMag .dispo, .dispoMag .nonDispo{
+  vertical-align: center;
+}
+
+
+.addarticlecontainer{
+  margin-bottom: 10px;
+  padding-top: 10px;
+  text-align:center;
+
+}
+
+.alphabet a{
+  color: purple;
+}
+
+.pict{
+  vertical-align: middle;
+  background-color: white;
+}
+
+
+.addarticle{
+
+  padding: 5px;
+  background-color: white;
+  text-align:center;
+  border: 1px solid black;
+  border-radius: 2px;
+
+}
+
+.top-article{
+  height:100px;
+}
+
+.modal {
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+#noProduct{
+  text-align: center;
+}
+
+/* Modal Content/Box */
+.modal-content {
+
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 2px solid #888;
+    width: 30%; /* Could be more or less, depending on screen size */
+}
+
+#form div{
+  padding: 2px;
+  display:flex;
+}
+
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.pictcont{
+  position:relative;
+}
+
+.pictcont div{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+#form div{
+  justify-content: space-between;
+}
+
+.alphabet a:visited, .alphabet a, .pages a:visited, .pages a {
+  color: black;
+}
+
+.cat a{
+  margin-left : 20px;
+  margin-right: 20px;
+}
+
+.pictcont div{
+  color: grey;
+  opacity: 0.5;
+}
+
+@media (max-width: 640px) {
+  .title, .price, .description, .dispoMag, .commande{
+    font-size: 20px;
+  }
+
+  .top-article{
+    height:135;
+  }
+  .item-container{
+    height: 190px;
+    margin-top:2px;
+    margin-bottom:2px;
+  }
+
+  .description{
+    margin-top: 0;
+  }
+
+  .pict{
+    border: 1px solid black;
+    height: 16vw;
+    width: 30vw;
+    text-align: center;
+    margin-right: 10px;
+    margin-left: auto;
+  }
+  .modal-content {
+
+      background-color: #fefefe;
+      margin: 15% auto; /* 15% from the top and centered */
+      padding: 20px;
+      border: 2px solid #888;
+      width: 75%; /* Could be more or less, depending on screen size */
+  }
+  .cat a{
+    font-size: 1.5vw;
+    margin-left : 2px;
+    margin-right: 2px;
+  }
+  .pictcont div{
+    font-size: 1.5vw;
+  }
+}
+
+body{
+  background-color: #fbf3d4;
+}
+
+.sentence{
+  position: sticky;
+  bottom: 0px;
+  height: 34px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 4px;
+  border-style: solid solid none solid;
+}
+
+.sentence p{
+  padding-top: 6.5px;
+  text-align: center;
+  margin: 0;
+}
+
+.s-bottom{
+  display: none;
+}

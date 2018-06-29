@@ -1,0 +1,65 @@
+# app/config/security.yml
+
+security:
+  encoders:
+    # Symfony\Component\Security\Core\User\User: plaintext
+    JuniorISEP\UserBundle\Entity\User:
+      algorithm: bcrypt
+
+
+  role_hierarchy:
+    ROLE_ADMIN:       ROLE_USER
+    ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+
+  providers:
+    main:
+      entity:
+        class: JuniorISEP\UserBundle\Entity\User
+        property: email
+
+
+  firewalls:
+    dev:
+      pattern: ^/(_(profiler|wdt)|css|images|js)/
+      security: false
+    main_login:
+      pattern: ^/login$
+      anonymous: true
+      provider: main
+    # main_index:
+    #   pattern: ^/$
+    #   anonymous : true
+    #   provider: main
+    main_register:
+      pattern: ^/register$
+      anonymous : true
+      provider: main
+    main_forgot:
+      pattern: ^/forgotpassword$
+      anonymous : true
+      provider: main
+    main_index:
+      pattern: ^/index$
+      anonymous : true
+      provider: main
+    main:
+      pattern: ^/
+      anonymous: false
+      provider: main
+      form_login:
+        login_path: junior_isep_vitrine_index
+        failure_path: login
+        check_path: login_check
+        default_target_path: junior_isep_vitrine_login_after
+        always_use_default_target_path: true
+      logout:
+        path:       logout
+        target:     junior_isep_vitrine_index
+      remember_me:
+        secret: '%secret%'
+        lifetime: 604800
+        path: /
+        always_remember_me: false
+
+  access_control:
+    #- { path: ^/accueil, roles: ROLE_USER }

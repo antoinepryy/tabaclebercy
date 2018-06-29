@@ -1,0 +1,4 @@
+brun : #4f2a05
+orange abricot : #ff7518
+orange obricot foncé : #FF8C35
+beige clair  : #fbf3d4

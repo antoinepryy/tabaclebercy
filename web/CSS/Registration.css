@@ -1,0 +1,47 @@
+
+.g-recaptcha {
+  transform: scale(0.5);
+  transform-origin: 0 0;
+  margin: 0 auto;
+  width: 304px;
+}
+
+
+
+form{
+border: 1px solid black;
+width: 200px;
+padding-top: 8px;
+background-color: white;
+}
+
+section{
+margin-top: 10px;
+margin-bottom: 10px;
+padding-bottom: 10px;
+padding-top: 10px;
+text-align: center;
+background-color: #fbf3d4;
+}
+
+.g-recaptcha{
+transform: scale(0.5);
+transform-origin: 0 0;
+margin: 0 auto;
+width: 304px;
+}
+
+.googl{
+width: 200px;
+margin-left: 25px;
+height:50px;
+}
+
+section div{
+padding-bottom: 3px;
+}
+
+button{
+position:relative;
+top:-25px;
+}

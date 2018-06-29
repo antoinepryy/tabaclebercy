@@ -1,0 +1,215 @@
+junior_isep_vitrine_homepage:
+    path:     /
+    defaults: { _controller: JuniorISEPVitrineBundle:Default:index }
+
+junior_isep_vitrine_index:
+    path:     /index
+    defaults: { _controller: JuniorISEPVitrineBundle:Default:connectionorregistration }
+
+junior_isep_vitrine_login_after:
+  path:     /verifications
+  defaults: { _controller: JuniorISEPVitrineBundle:Default:verifications }
+
+
+junior_isep_vitrine_accueil:
+  path: /accueil
+  defaults: { _controller: JuniorISEPVitrineBundle:Default:accueil }
+
+junior_isep_vitrine_changepassword:
+  path: /changepassword
+  defaults: {_controller: JuniorISEPVitrineBundle:Default:changepassword }
+
+junior_isep_vitrine_cigarettes:
+  path: /cigarettes/{page}/{order}/{form}
+  defaults: { _controller: JuniorISEPVitrineBundle:Default:cigarettes}
+  requirements:
+    page : \d{1,}
+
+junior_isep_vitrine_cigares:
+  path: /cigares/{page}/{order}/{form}
+  defaults: { _controller: JuniorISEPVitrineBundle:Default:cigares}
+  requirements:
+    page : \d{1,}
+
+junior_isep_vitrine_tabacapipe:
+  path: /tabacapipe/{page}/{order}/{form}
+  defaults: { _controller: JuniorISEPVitrineBundle:Default:tabacapipe}
+  requirements:
+    page : \d{1,}
+
+junior_isep_vitrine_cigaretteelectroniquejunior:
+  path: /cigaretteelectroniquejunior/{page}/{order}/{form}
+  defaults: { _controller: JuniorISEPVitrineBundle:Default:cigaretteelectroniquejunior}
+  requirements:
+    page : \d{1,}
+
+junior_isep_vitrine_cigaretteelectroniquesenior:
+  path: /cigaretteelectroniquesenior/{page}/{order}/{form}
+  defaults: { _controller: JuniorISEPVitrineBundle:Default:cigaretteelectroniquesenior}
+  requirements:
+    page : \d{1,}
+
+junior_isep_vitrine_liquides:
+  path: /liquides/{page}/{order}/{form}
+  defaults: { _controller: JuniorISEPVitrineBundle:Default:liquides}
+  requirements:
+    page : \d{1,}
+
+junior_isep_vitrine_materiel:
+  path: /materiel/{page}/{order}/{form}
+  defaults: { _controller: JuniorISEPVitrineBundle:Default:materiel}
+  requirements:
+    page : \d{1,}
+
+junior_isep_vitrine_briquets:
+  path: /briquets/{page}/{order}/{form}
+  defaults: { _controller: JuniorISEPVitrineBundle:Default:briquets}
+  requirements:
+    page : \d{1,}
+
+junior_isep_vitrine_accessoirescigares:
+  path: /accessoirescigares/{page}/{order}/{form}
+  defaults: { _controller: JuniorISEPVitrineBundle:Default:accessoirescigares}
+  requirements:
+    page : \d{1,}
+
+junior_isep_vitrine_pipes:
+  path: /pipes/{page}/{order}/{form}
+  defaults: { _controller: JuniorISEPVitrineBundle:Default:pipes}
+  requirements:
+    page : \d{1,}
+
+
+junior_isep_vitrine_autres:
+  path: /autres/{page}/{order}/{form}
+  defaults: { _controller: JuniorISEPVitrineBundle:Default:autres}
+  requirements:
+    page : \d{1,}
+
+junior_isep_vitrine_champagnes:
+  path: /champagnes/{page}/{order}/{form}
+  defaults: { _controller: JuniorISEPVitrineBundle:Default:champagnes}
+  requirements:
+    page : \d{1,}
+
+junior_isep_vitrine_vinsrouges:
+  path: /vinsrouges/{page}/{order}/{form}
+  defaults: { _controller: JuniorISEPVitrineBundle:Default:vinsrouges}
+  requirements:
+    page : \d{1,}
+
+junior_isep_vitrine_vinsblancs:
+  path: /vinsblancs/{page}/{order}/{form}
+  defaults: { _controller: JuniorISEPVitrineBundle:Default:vinsblancs}
+  requirements:
+    page : \d{1,}
+
+junior_isep_vitrine_curiosites:
+  path: /curiosites/{page}/{order}/{form}
+  defaults: { _controller: JuniorISEPVitrineBundle:Default:curiosites}
+  requirements:
+    page : \d{1,}
+
+junior_isep_vitrine_spiritueux:
+  path: /spiritueuxliqueurs/{page}/{order}/{form}
+  defaults: { _controller: JuniorISEPVitrineBundle:Default:spiritueux}
+  requirements:
+    page : \d{1,}
+
+junior_isep_vitrine_register:
+  path: /register
+  defaults: {_controller: JuniorISEPUserBundle:Registration:register }
+
+junior_isep_vitrine_espaceclient:
+  path: /infos
+  defaults: {_controller: JuniorISEPVitrineBundle:Default:infos }
+
+junior_isep_vitrine_changepassword:
+  path: /changepassword
+  defaults: {_controller: JuniorISEPVitrineBundle:Admin:changepassword}
+
+junior_isep_vitrine_espaceadmin:
+  path: admin/infos
+  defaults: {_controller: JuniorISEPVitrineBundle:Admin:admininfos }
+
+junior_isep_vitrine_admin_userlist:
+  path: /admin/userlist
+  defaults: {_controller: JuniorISEPVitrineBundle:Admin:userlist }
+
+junior_isep_vitrine_admin_acceslist:
+  path: /admin/acceslist
+  defaults: {_controller: JuniorISEPVitrineBundle:Admin:acceslist }
+
+junior_isep_vitrine_admin_logs:
+  path: /admin/logs
+  defaults: {_controller: JuniorISEPVitrineBundle:Admin:logs }
+
+junior_isep_vitrine_admin_logsclean:
+  path: /admin/logsclean
+  defaults: {_controller: JuniorISEPVitrineBundle:Admin:logsclean }
+
+junior_isep_vitrine_admin_deleteuser:
+  path: /admin/delete/{id}/{nextpath}
+  defaults: {_controller: JuniorISEPVitrineBundle:Admin:deleteuser }
+
+
+
+junior_isep_vitrine_admin_authorise:
+  path: /admin/authorizeuser/{id}
+  defaults: {_controller: JuniorISEPVitrineBundle:Admin:authorizeuser }
+
+junior_isep_vitrine_admin_addbrand:
+  path: /admin/addbrand
+  defaults: {_controller: JuniorISEPVitrineBundle:Admin:addbrand }
+
+junior_isep_vitrine_admin_addtabac:
+  path: /admin/addtabac
+  defaults: {_controller: JuniorISEPVitrineBundle:Admin:addtabac }
+
+junior_isep_vitrine_admin_addaccessoire:
+  path: /admin/addaccessoire
+  defaults: {_controller: JuniorISEPVitrineBundle:Admin:addaccessoire }
+
+junior_isep_vitrine_admin_addcigaretteelec:
+  path: /admin/addcigaretteelectronique
+  defaults: {_controller: JuniorISEPVitrineBundle:Admin:addcigaretteelectronique }
+
+junior_isep_vitrine_admin_addalcools:
+  path: /admin/addalcools
+  defaults: {_controller: JuniorISEPVitrineBundle:Admin:addalcools }
+
+junior_isep_vitrine_admin_deletearticle:
+  path: /admin/deletearticle/{id}
+  defaults: {_controller: JuniorISEPVitrineBundle:Admin:deletearticle }
+
+junior_isep_vitrine_admin_listbrand:
+  path: /admin/listbrand
+  defaults: {_controller: JuniorISEPVitrineBundle:Admin:listbrand }
+
+junior_isep_vitrine_admin_deletebrand:
+  path: /admin/deletebrand/{id}
+  defaults: {_controller: JuniorISEPVitrineBundle:Admin:deletebrand }
+
+junior_isep_vitrine_admin_modifybrand:
+  path: /admin/modifybrand/{id}
+  defaults: {_controller: JuniorISEPVitrineBundle:Admin:modifybrand }
+
+junior_isep_vitrine_admin_modifycontact:
+  path: /admin/modifycontact
+  defaults: {_controller: JuniorISEPVitrineBundle:Admin:modifycontact }
+
+junior_isep_vitrine_admin_modifysentence:
+  path: /admin/modifysentence
+  defaults:  {_controller: JuniorISEPVitrineBundle:Admin:modifysentence }
+
+junior_isep_vitrine_forgotpassword:
+  path: /forgotpassword
+  defaults: {_controller: JuniorISEPVitrineBundle:Default:forgotpassword }
+
+junior_isep_vitrine_infoscontact:
+  path: /contact
+  defaults: {_controller: JuniorISEPVitrineBundle:Default:contact }
+  
+junior_isep_vitrine_mentionslegales:
+  path: /mentionslegales
+  defaults: {_controller: JuniorISEPVitrineBundle:Default:mentionslegales}

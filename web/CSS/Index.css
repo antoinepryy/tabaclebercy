@@ -1,0 +1,96 @@
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+p,h1,h2{
+  text-align: center;
+}
+
+h1{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 5vw;
+}
+
+h2{
+  font-size: 2.5vw;
+}
+
+p{
+  font-size: 1.5vw;
+}
+
+
+
+.links{
+  width: 100%;
+
+}
+
+.links div{
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.links div a {
+  text-align: center;
+}
+
+.connect, .register{
+  background-color: #f7dcb4;
+  font-size: 2vw;
+
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  border-radius: 7px;
+  padding: 4px;
+}
+
+
+.connect{
+  margin-right: 10%;
+}
+
+.register{
+  margin-left: 10%;
+}
+
+
+
+@media (max-width: 640px) {
+  h1{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 10vw;
+  }
+
+  h2{
+    font-size: 5vw;
+  }
+
+  p{
+    font-size: 3vw;
+  }
+
+  .links div{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .links div a{
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+  }
+
+
+
+}

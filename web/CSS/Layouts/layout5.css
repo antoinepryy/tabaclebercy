@@ -1,0 +1,137 @@
+body{
+  font-family: 'Roboto', sans-serif;
+  background-color: #fbf3d4;
+  min-height: 100%;
+  position: relative;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+header{
+  background-color: #ff7518;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.titre{
+
+  margin-left: 5%;
+
+}
+
+
+
+.titre a{
+  text-decoration: none;
+  color: black;
+
+}
+
+.user-part{
+  font-size: 1.5vw;
+  margin-right: 5%;
+}
+
+.top-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.cat-container{
+  border: solid black 1px;
+  border-bottom: 0px;
+  background-color: #4f2a05;
+  display: table;
+  width: 100%;
+}
+
+
+
+.headCat{
+
+  border: 1px black solid;
+  font-size: 1.9vw;
+  border-color: black;
+  background-color: #4f2a05;
+  color: white;
+  display: table-cell;
+  text-align: center;
+  text-decoration: none;
+}
+
+header .client , .footerContact, .footerMention, .logout{
+  text-decoration: none;
+}
+
+
+
+.foot-elements{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff7518;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.copyright{
+  margin-right: 3%;
+}
+
+.footerContact, .footerMention{
+  margin-left:2%;
+}
+
+.foot-links{
+  width: 50%;
+}
+
+.foot-links a{
+  vertical-align: middle;
+}
+
+.footerContact, .footerMention, .copyright{
+  font-size: 1.2vw;
+}
+
+
+
+
+.catDisp{
+  list-style: none;
+
+}
+
+.catli{
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#tabac, #cigaretteElec,#accessoires, #alcools{
+
+  font-size: 2.5vw;
+
+}
+
+section{
+  min-height: 70%;
+}
+
+
+section a:visited, section a, footer a, .user-part a, .user-part a:visited{
+  color: black;
+}
+
+@media (max-width: 640px) {
+  .footerContact, .footerMention, .copyright, .client, .logout{
+    font-size: 2.5vw;
+  }
+
+  .headCat{
+    padding: 6px;
+    font-size: 2.7vw;
+  }
+}

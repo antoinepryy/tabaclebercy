@@ -1,0 +1,36 @@
+{%extends "layout5.html.twig" %}
+{% block style %}
+<link rel="stylesheet" href="{{ asset('CSS/Logs.css') }}" />
+{% endblock %}
+{% block body %}
+
+<section>
+<div class="link-cont">
+   <a class="delLog "href=" {{ path('junior_isep_vitrine_admin_logsclean') }} "> Supprimer les logs </a>
+</div>
+
+<br>
+  <table>
+    <tr>
+       <th>Date</th>
+       <th>IP</th>
+
+   </tr>
+
+  {% for log in listLogs %}
+  <tr>
+
+      <td>{{ log.datetime|date('Y-m-d H:i:s') }}</td>
+      <td>{{ log.ip }}</td>
+
+  </tr>
+
+
+
+  {% endfor %}
+
+   </table>
+
+</section>
+
+{% endblock %}
