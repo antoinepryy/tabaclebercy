@@ -209,7 +209,11 @@ junior_isep_vitrine_forgotpassword:
 junior_isep_vitrine_infoscontact:
   path: /contact
   defaults: {_controller: JuniorISEPVitrineBundle:Default:contact }
-  
+
 junior_isep_vitrine_mentionslegales:
   path: /mentionslegales
   defaults: {_controller: JuniorISEPVitrineBundle:Default:mentionslegales}
+
+junior_isep_vitrine_test:
+  path: /test
+  defaults: {_controller: JuniorISEPVitrineBundle:Default:test}

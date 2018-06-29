@@ -2017,7 +2017,7 @@ class DefaultController extends Controller{
               $form1 = $this->createFormBuilder($curentUser)
 
               ->add('Email', EmailType::class, array(
-                'label' => 'Email :',
+                'label' => 'Email : ',
               ))
               ->add('saveEmail', SubmitType::class, array('label' => 'Changer Email' ))
               ->getForm();
@@ -2151,33 +2151,38 @@ class DefaultController extends Controller{
             $pass[] = $alphabet[$n];
         }
 
+        $passwordToSend = implode($pass);
 
-        $password = $passwordEncoder->encodePassword($foundUser, implode($pass));
-        $foundUser->setPassword($password);
-        $entityManager->persist($foundUser);
-        $entityManager->flush();
-        $message = (new \Swift_Message('Hello Email'))
-          ->setFrom('tabacbercy@gmail.com')
-          ->setTo('tabacbercy@gmail.com')
-          ->setBody('Votre nouveau mot de passe est')
-        ;
-        $this->get('mailer')->send($message);
+        if ($foundUser){
+          $password = $passwordEncoder->encodePassword($foundUser, implode($pass));
+          $foundUser->setPassword($password);
+          $entityManager->persist($foundUser);
+          $entityManager->flush();
+          $message = (new \Swift_Message('Hello Email'))
+           ->setFrom('antoine.ap.57@gmail.com')
+           ->setTo($foundUser->getEmail())
+           ->setBody('Bonjour, votre nouveau mot de passe a été réinitialisé : '.$passwordToSend)
+          ;
+          $this->get('mailer')->send($message);
+          return $this->render('forgot.html.twig', array(
+            'form1' => $form1->createView(),
+            'status' =>'valid',
+          ));
 
-        die(var_dump(implode($pass)));
-        return $this->redirectToRoute('junior_isep_vitrine_changepassword');
+        }
+        else{
+          return $this->render('forgot.html.twig', array(
+            'form1' => $form1->createView(),
+            'status' =>'notfound',
+          ));
 
-        return $this->render('changepassword.html.twig', array(
-          'form1' => $form1->createView(),
-          'status' =>'valid',
-        ));
-
-      }}
+        }}}
 
 
       return $this->render('forgot.html.twig', array(
         'form1' => $form1->createView(),
         'status' => $request->query->get('status'),
-        
+
       ));
 
     }
@@ -2188,5 +2193,13 @@ class DefaultController extends Controller{
 
     public function testAction(Request $request){
 
-      throw $this->createNotFoundException('');
+      $pass = "12345";
+
+      $message = (new \Swift_Message('Hello Email'))
+        ->setFrom('antoine.ap.57@gmail.com')
+        ->setTo('aperry@juniorisep.com')
+        ->setBody('Votre nouveau mot de passe est'.$pass)
+      ;
+      $this->get('mailer')->send($message);
+      return $this->render('vitrine/mentionslegales.html.twig');
 }}

@@ -5,13 +5,17 @@
 {% block body %}
 {% if status != null %}
 
-
-<section>
-  <p class="status">
-     Un mail de récupération vous a été envoyé
-  </p>
-
+  {% if status == "valid" %}
+  
+    <p class="status">
+       Un mail de récupération vous a été envoyé
+    </p>
+  {% elseif status == "notfound" %}
+    <p class="status">
+       Aucun utilisateur correspondant à cette addresse
+    </p>
   {% endif %}
+{% endif %}
 {{ form_start(form1) }}
 {{ form_widget(form1) }}
 {{ form_end(form1) }}<br>
