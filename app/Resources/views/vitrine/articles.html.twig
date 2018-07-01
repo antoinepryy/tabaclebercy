@@ -154,14 +154,14 @@
             <div class="bottom-left">
               <div>
                 {% if article.available %}
-                <span class="dispoMag">Disponibilité magasin <img class="dispo" src="{{ asset( '/uploads/green.png' ) }}"/>  </span>
+                <span class="dispoMag">Disponibilité magasin <img class="dispo" src="{{ asset( 'uploads/green.png' ) }}"/>  </span>
                 {% else %}
-                <span class="dispoMag">Disponibilité magasin <img class="nonDispo" src="{{ asset( '/uploads/red.png' ) }}"/>  </span>
+                <span class="dispoMag">Disponibilité magasin <img class="nonDispo" src="{{ asset( 'uploads/red.png' ) }}"/>  </span>
                 {% endif %}
                 {% if article.onOrder %}
-                <span class="commande">Sur commande <img class="dispo" src="{{ asset( '/uploads/green.png' ) }}"/></span>
+                <span class="commande">Sur commande <img class="dispo" src="{{ asset( 'uploads/green.png' ) }}"/></span>
                 {% else %}
-                <span class="commande">Sur commande <img class="nonDispo" src="{{ asset( '/uploads/red.png' ) }}"/></span>
+                <span class="commande">Sur commande <img class="nonDispo" src="{{ asset( 'uploads/red.png' ) }}"/></span>
                 {% endif %}
 
               </div>
@@ -174,7 +174,7 @@
           {% if app.user.getemail == 'tabacbercy@gmail.com' %}
           <div class="admin-actions">
             <a class="admin-delete" href="{{ path('junior_isep_vitrine_admin_deletearticle', { 'id': article.id}) }}">&times;</a>
-            <a class="admin-modify" href="{{ path(app.request.attributes.get('_route'), { 'page': page, 'order': order, 'form': loop.index - 1 }) }}"> <img src="{{ asset( '../web/uploads/edit-pencil.png' ) }}" /></a>
+            <a class="admin-modify" href="{{ path(app.request.attributes.get('_route'), { 'page': page, 'order': order, 'form': loop.index - 1 }) }}"> <img src="{{ asset( 'uploads/edit-pencil.png' ) }}" /></a>
           </div>
           {% endif %}
 
