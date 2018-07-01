@@ -40,9 +40,3 @@
 
 # Embedded web-server pid file
 /.web-server-pid
-
-
-#idk
-bin/symfony_requirements
-var/SymfonyRequirements.php
-web/config.php
