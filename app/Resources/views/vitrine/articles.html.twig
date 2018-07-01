@@ -154,14 +154,14 @@
             <div class="bottom-left">
               <div>
                 {% if article.available %}
-                <span class="dispoMag">Disponibilité magasin <img class="dispo" src="{{ asset( '../web/uploads/green.png' ) }}"/>  </span>
+                <span class="dispoMag">Disponibilité magasin <img class="dispo" src="{{ asset( '/uploads/green.png' ) }}"/>  </span>
                 {% else %}
-                <span class="dispoMag">Disponibilité magasin <img class="nonDispo" src="{{ asset( '../web/uploads/red.png' ) }}"/>  </span>
+                <span class="dispoMag">Disponibilité magasin <img class="nonDispo" src="{{ asset( '/uploads/red.png' ) }}"/>  </span>
                 {% endif %}
                 {% if article.onOrder %}
-                <span class="commande">Sur commande <img class="dispo" src="{{ asset( '../web/uploads/green.png' ) }}"/></span>
+                <span class="commande">Sur commande <img class="dispo" src="{{ asset( '/uploads/green.png' ) }}"/></span>
                 {% else %}
-                <span class="commande">Sur commande <img class="nonDispo" src="{{ asset( '../web/uploads/red.png' ) }}"/></span>
+                <span class="commande">Sur commande <img class="nonDispo" src="{{ asset( '/uploads/red.png' ) }}"/></span>
                 {% endif %}
 
               </div>
