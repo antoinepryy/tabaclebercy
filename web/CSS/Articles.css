@@ -171,8 +171,8 @@ a{
 
 .pict{
   border: 1px solid black;
-  height: 9vw;
-  width: 17vw;
+  height: 100%;
+  width: 100%;
   text-align: center;
   margin-right: 5px;
   margin-left: auto;
@@ -201,7 +201,8 @@ a{
 }
 
 .right-top{
-  height: 90px;
+  height: 120;
+  width: 45%;
 }
 
 .bottom-article{
