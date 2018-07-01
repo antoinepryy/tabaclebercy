@@ -961,14 +961,9 @@ class AdminController extends Controller{
           $form1 = $this->createFormBuilder($infos)
 
 
-            ->add('phoneNumber', textType::class, array(
-              'label' => 'Numéro de téléphone',
-            ))
-            ->add('email', textType::class, array(
-              'label' => 'Email',
-            ))
-            ->add('address', textType::class, array(
-              'label' => 'Adresse',
+
+            ->add('text', textType::class, array(
+              'label' => 'Texte',
             ))
             ->add('Save', SubmitType::class, array('label' => 'Modifier les informations' ))
             ->getForm();
@@ -984,10 +979,8 @@ class AdminController extends Controller{
 
                 $data1 = $form1->getData();
 
-                $phoneNumber=$data1->getPhoneNumber();
-                $infos->setEmail($data1->getEmail());
-                $infos->setPhoneNumber($data1->getPhoneNumber());
-                $infos->setAddress($data1->getAddress());
+                
+                $infos->setText($data1->getText());
 
                 $entityManager->persist($infos);
                 $entityManager->flush();

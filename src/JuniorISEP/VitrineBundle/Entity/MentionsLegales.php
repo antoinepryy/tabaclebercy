@@ -5,12 +5,12 @@ namespace JuniorISEP\VitrineBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * InfosContact
+ * MentionsLegales
  *
- * @ORM\Table(name="infos_contact")
- * @ORM\Entity(repositoryClass="JuniorISEP\VitrineBundle\Repository\InfosContactRepository")
+ * @ORM\Table(name="mentions_legales")
+ * @ORM\Entity(repositoryClass="JuniorISEP\VitrineBundle\Repository\MentionsLegalesRepository")
  */
-class InfosContact
+class MentionsLegales
 {
     /**
      * @var int
@@ -21,13 +21,13 @@ class InfosContact
      */
     private $id;
 
-
     /**
      * @var string|null
      *
      * @ORM\Column(name="text", type="text", nullable=true)
      */
     private $text;
+
 
     /**
      * Get id.
@@ -39,13 +39,12 @@ class InfosContact
         return $this->id;
     }
 
-
     /**
      * Set text.
      *
      * @param string|null $text
      *
-     * @return InfosContact
+     * @return MentionsLegales
      */
     public function setText($text = null)
     {

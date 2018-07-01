@@ -10,10 +10,15 @@
 
 form{
 border: 1px solid black;
-width: 200px;
+width: auto;
 padding-top: 8px;
 background-color: white;
 }
+
+/* form div{
+  display: table-caption;
+  margin: auto;
+} */
 
 section{
 margin-top: 10px;
@@ -22,6 +27,14 @@ padding-bottom: 10px;
 padding-top: 10px;
 text-align: center;
 background-color: #fbf3d4;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+input{
+  border: solid grey 1px;
 }
 
 .g-recaptcha{
