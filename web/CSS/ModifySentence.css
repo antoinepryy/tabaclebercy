@@ -39,6 +39,20 @@ form{
   size: 80;
 }
 
+body{
+  width: 100%;
+  height: 100% !important;
+  position: relative !important;
+  margin: 0 !important;
+}
+
+footer{
+  position: absolute!important;
+  bottom: 0 !important;
+  right: 0 !important;
+  left: 0 !important;
+}
+
 
 
 @media (max-width: 640px) {
