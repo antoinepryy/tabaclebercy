@@ -65,3 +65,14 @@ input{
   margin-bottom: 5px;
   margin-top: 5px;
 }
+
+form{
+
+  display: inline-grid;
+  width: 100%;
+}
+
+form input{
+  width: 80%;
+  margin: auto;
+}

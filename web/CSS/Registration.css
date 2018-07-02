@@ -45,8 +45,9 @@ width: 304px;
 }
 
 .googl{
-width: 200px;
-margin-left: 25px;
+
+margin-left: 50%;
+transform: translateX(-50%);
 height:50px;
 }
 
@@ -57,4 +58,11 @@ padding-bottom: 3px;
 button{
 position:relative;
 top:-25px;
+}
+
+
+.form div{
+  margin: auto;
+  display: grid;
+  width: 75%;
 }
