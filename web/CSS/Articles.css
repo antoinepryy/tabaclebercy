@@ -201,8 +201,8 @@ a{
 }
 
 .right-top{
-  height: 120;
-  width: 45%;
+  height: 8em;
+  width: 17em;
 }
 
 .bottom-article{
@@ -211,6 +211,7 @@ a{
 }
 
 .left-top{
+  width: 40%;
 }
 
 .bottom-article{
@@ -371,15 +372,25 @@ a{
 }
 
 @media (max-width: 640px) {
+
+  .left-top{
+
+    width: 40%
+  }
+
+  .right-top{
+    height: 80;
+    width: 150;
+  }
   .title, .price, .description, .dispoMag, .commande{
-    font-size: 20px;
+    font-size: 0.9em;
   }
 
   .top-article{
-    height:135;
+    height:100;
   }
   .item-container{
-    height: 190px;
+
     margin-top:2px;
     margin-bottom:2px;
   }
@@ -388,14 +399,7 @@ a{
     margin-top: 0;
   }
 
-  .pict{
-    border: 1px solid black;
-    height: 16vw;
-    width: 30vw;
-    text-align: center;
-    margin-right: 10px;
-    margin-left: auto;
-  }
+
   .modal-content {
 
       background-color: #fefefe;

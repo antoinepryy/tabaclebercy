@@ -2010,6 +2010,9 @@ class DefaultController extends Controller{
     public function infosAction(Request $request, UserPasswordEncoderInterface $passwordEncoder)
     {
 
+      $curentUser = $this->getUser()->getEmail();
+      if ($curentUser != 'tabacbercy@gmail.com') {
+
 
         $curentUser = $this->getUser();
 
@@ -2052,7 +2055,12 @@ class DefaultController extends Controller{
             return $this->render('infos.html.twig', array(
               'form1' => $form1->createView(),
               'status' => $request->query->get('status'),
-            ));
+            ));}
+            else {
+
+              throw $this->createNotFoundException('');
+
+            }
     }
 
 
