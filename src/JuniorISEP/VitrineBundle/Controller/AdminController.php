@@ -563,7 +563,7 @@ class AdminController extends Controller{
                 'Champagnes' => $champagnes,
                 'Vins rouges' => $vinsrouges,
                 'Vins blancs' => $vinsblancs,
-                'Curiosités' => $vinsblancs,
+                'Curiosités' => $curiosites,
                 'Spiritueux et liqueurs' => $spiritueux,
               ),
               'label' => 'Catégorie : ',
